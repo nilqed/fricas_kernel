@@ -12,7 +12,7 @@ Instead of using pexepct's *replwrap* we use winpexpect/pexpect *spawn*
 and *expect* functions wrapped in a class called **FriCAS**.
 
 ------------
-Prerequsites
+Prerequisites
 ------------
 A working IPython installation with pyzmq, tornado, pygments and so on.
 
@@ -79,5 +79,5 @@ Then choose the fricas kernel when creating a new notebook.
 ![alt text](https://github.com/scios/fricas_kernel/blob/master/screenshots/fkernel_nb.png "NB")
 
 
-
+ToDo: see the Wiki https://github.com/scios/fricas_kernel/wiki
 
