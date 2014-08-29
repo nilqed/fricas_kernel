@@ -50,13 +50,33 @@ Otherwise, if you have version 3.0dev installed then start as usual.
 
 #####Screenshot (more in the folder)
 
-![alt text](https://github.com/scios/fricas_kernel/blob/master/screenshots/fkernel_cygc.png "Logo Title Text 1")
+![alt text](https://github.com/scios/fricas_kernel/blob/master/screenshots/fkernel_cygc.png "QTconsole")
 
 
 #####Note
 This is a prototype version (0.1) and was tested with FriCAS 1.2.3 on Windows7/Cygwin and on Ubuntu 12. Only the **qtconsole** frontend has been tested. The **notebook** version needs a full install of IPython. That means if you overwrite your existing installation with the 3.0dev version do not blame me.
 
 If you want to have *code completion* in a *pop-up window* instead of *inline text* one has to check this in the IPython configuration file. 
+
+
+#####Update
+The same kernel also works for the notebook. One needs IPython 3.0dev and
+
+ * jinja2
+ * jsonschema
+ * jsonpointer
+
+which can be installed wirh `pip install <package>`. 
+
+Start command:
+
+```
+$ ipython notebook --profile=fricas
+```
+
+Then choose the fricas kernel when creating a new notebook.
+
+![alt text](https://github.com/scios/fricas_kernel/blob/master/screenshots/fkernel_nb.png "NB")
 
 
 
