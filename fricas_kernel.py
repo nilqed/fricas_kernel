@@ -3,7 +3,7 @@
 
 __author__ = "Kurt Pagani <nilqed@gmail.com>"
 __svn_id__ = "$Id:$"
-__rev_id__ = "Rev. 24.06.2012 11:39:03"
+
 
 # ========================================================================
 # FriCAS (wrapper) kernel for IPython
@@ -40,6 +40,9 @@ __rev_id__ = "Rev. 24.06.2012 11:39:03"
 #
 
 from IPython.kernel.zmq.kernelbase import Kernel
+
+#from IPython.core.display import Latex, Image, display_latex, display
+
 import re, os
 
 if os.name == 'nt':
@@ -50,7 +53,7 @@ else:
     spawn = xp.spawn
 
 
-__version__ = '0.1'
+__version__ = '0.2'
 
 fricas_exe = "fricas -nosman"
 prompt_pat = "\([0-9]+\) ->"
@@ -330,15 +333,28 @@ class FricasKernel(Kernel):
 
             self.fricas.writeln(code.rstrip())
 
-            if self.fricas.hasoutput:
+            if self.fricas.hasoutput: 
               output = self.fricas.output
+              tex = self.fricas.extract_tex(output)
+              pretex = r"$\def\sp{^}\def\sb{_}\def\leqno(#1){}$"
+              #output = self.fricas.remove_tex(output, tex)
+              
+    
             else:
               output = "none"
 
+            if tex == []:
+                data = {'text/plain':output}
+            else:
+                data = {'text/plain':output,'text/latex':pretex+tex[0]}
 
             if not silent:
-                stream_content = {'name': 'stdout', 'data': output}
-                self.send_response(self.iopub_socket, 'stream', stream_content)
+                #stream_content = {'name': 'stdout', 'data': output}
+                #self.send_response(self.iopub_socket, 'stream', stream_content)
+                
+                display_data = {'source':'me', 'data':data, 'metadata':{}}
+                self.send_response(self.iopub_socket, 'display_data', display_data) 
+                
             if interrupted:
                 return {'status': 'abort', 'execution_count': self.execution_count}
 
