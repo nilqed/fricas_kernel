@@ -79,5 +79,19 @@ Then choose the fricas kernel when creating a new notebook.
 ![alt text](https://github.com/scios/fricas_kernel/blob/master/screenshots/fkernel_nb.png "NB")
 
 
+#####Update V0.2
+
+The new version 0.2 can render MathJax if one sets
+
+```
+ )set output tex on
+
+```
+
+in the notebook. The assets and drawbacks of MathJax rendering of FriCAS output can be seen here:
+
+https://rawgit.com/scios/fricas_kernel/master/screenshots/fricas_nb_mathjax.htm
+
+
 ToDo: see the Wiki https://github.com/scios/fricas_kernel/wiki
 
