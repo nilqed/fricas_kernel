@@ -92,6 +92,10 @@ in the notebook. The assets and drawbacks of MathJax rendering of FriCAS output 
 
 https://rawgit.com/scios/fricas_kernel/master/screenshots/fricas_nb_mathjax.htm
 
+One may compare this to the output of the *TeXmacs* plugin (exported Pdf):
+
+https://rawgit.com/scios/fricas_kernel/master/screenshots/fricas_cmp.pdf
+
 
 ToDo: see the Wiki https://github.com/scios/fricas_kernel/wiki
 
