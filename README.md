@@ -50,7 +50,7 @@ Otherwise, if you have version 3.0dev installed then start as usual.
 
 #####Screenshot (more in the folder)
 
-![alt text](https://github.com/scios/fricas_kernel/blob/master/screenshots/fkernel_cygc.png "QTconsole")
+![alt text](https://github.com/scios/fricas_kernel/raw/master/screenshots/fkernel_cygc.png "QTconsole")
 
 
 #####Note
@@ -76,7 +76,7 @@ $ ipython notebook --profile=fricas
 
 Then choose the fricas kernel when creating a new notebook.
 
-![alt text](https://github.com/scios/fricas_kernel/blob/master/screenshots/fkernel_nb.png "NB")
+![alt text](https://github.com/scios/fricas_kernel/raw/master/screenshots/fkernel_nb.png "NB")
 
 
 #####Update V0.2
@@ -98,4 +98,3 @@ https://rawgit.com/scios/fricas_kernel/master/screenshots/fricas_cmp.pdf
 
 
 ToDo: see the Wiki https://github.com/scios/fricas_kernel/wiki
-
