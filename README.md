@@ -11,6 +11,11 @@ http://ipython.org/ipython-doc/dev/development/wrapperkernels.html.
 Instead of using pexepct's *replwrap* we use winpexpect/pexpect *spawn*
 and *expect* functions wrapped in a class called **FriCAS**.
 
+
+Updates see at the end.
+
+Current version: 0.3 / August 2015
+
 ------------
 Prerequisites
 ------------
@@ -95,6 +100,17 @@ https://rawgit.com/scios/fricas_kernel/master/screenshots/fricas_nb_mathjax.htm
 One may compare this to the output of the *TeXmacs* plugin (exported Pdf):
 
 https://rawgit.com/scios/fricas_kernel/master/screenshots/fricas_cmp.pdf
+
+####Update V0.3
+
+Comaptible to Jupyter (messages) V3.2 
+
+Expect: self.axp.setecho(False) ... suppress nb echo
+
+Kernel: languageinfo
+
+New: introspection (principle)
+
 
 
 ToDo: see the Wiki https://github.com/scios/fricas_kernel/wiki
