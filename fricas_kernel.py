@@ -2,7 +2,7 @@
 #!/usr/bin/env python
 
 __author__ = "Kurt Pagani <nilqed@gmail.com>"
-__svn_id__ = "$Id:$"
+__svn_id__ = "$Id: fricas_kernel.py 3 2015-08-03 21:30:43Z pagani $"
 
 
 # ========================================================================
@@ -53,10 +53,11 @@ else:
     spawn = xp.spawn
 
 
-__version__ = '0.2'
+__version__ = '0.3'
 
 fricas_exe = "fricas -nosman"
 prompt_pat = "\([0-9]+\) ->"
+
 
 class FriCAS():
   """
@@ -140,6 +141,7 @@ class FriCAS():
     """
     if self.axp is None:
       self.axp = spawn(self.app, **kwargs)
+      self.axp.setecho(False) #+ echo false
       if self._axp_expect():
         self.banner = self.axp.before
         self.prompt = self.axp.after
@@ -308,8 +310,9 @@ class FricasKernel(Kernel):
 
     implementation = 'fricas_kernel'
     implementation_version = __version__
-    language = 'fricas'
+    language = 'spad'
     language_version = '0.1'
+    language_info = {'name': 'spad', 'mimetype': 'text/plain'}
     banner = "FriCAS Kernel"
 
 
@@ -405,6 +408,15 @@ class FricasKernel(Kernel):
         return {'matches': matches, 'cursor_start': start,
                 'cursor_end': cursor_pos, 'metadata': dict(),
                 'status': 'ok'}
+
+    def do_inspect(self, code, cursor_pos, detail_level=0):
+        data = dict()
+        docstring = "Code:"+code+"\n"  # echo code
+        if docstring:
+            data = {'text/plain': docstring}
+            #attention: msg changed in version 5.0
+        return {'status': 'ok', 'found': True, 'data': data, 'metadata': dict()}
+
 
 
     def do_shutdown(self, restart):
