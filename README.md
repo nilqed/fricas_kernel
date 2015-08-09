@@ -14,14 +14,14 @@ and *expect* functions wrapped in a class called **FriCAS**.
 
 Updates see at the end.
 
-Current version: 0.3 / August 2015
+Current version: 0.4 / August 2015
 
 ------------
 Prerequisites
 ------------
 A working IPython installation with pyzmq, tornado, pygments and so on.
 
-IPython 3.0dev or higher https://github.com/ipython/ipython
+IPython 3.0 or higher https://github.com/ipython/ipython
 
 get it if necessary: 
 
@@ -37,11 +37,18 @@ Fricas: http://fricas.sourceforge.net/download.html
 Install kernel
 --------------
 
-Get this repo and 
+Get this repo and do
 
 `$python kernel_setup.py install`
 
 (should push a kernel spec to ~/.ipython/kernels)
+
+then start with:
+
+`$ipython notebook`
+
+and choose the **FriCAS** kernel in the drop down menu.
+
 
 
 **Test** directly from git clone directory *ipython*:
@@ -112,5 +119,17 @@ Kernel: languageinfo
 New: introspection (principle)
 
 
+####Update V0.4
 
-ToDo: see the Wiki https://github.com/scios/fricas_kernel/wiki
+Rewrite of classes (theApp & theKernel). Now more generic parts. The kernel
+was tested with FriCAS, Axiom and OpenAxiom on Ubuntu 14.x and Windows 7. 
+Simply change the parameter **executable** in the kernel source file (top).
+
+Introspection and code completion reliably working.
+
+Code type is now recognized. Either single line or multiline input with or
+without continuation characters (indentation mode).
+
+
+
+

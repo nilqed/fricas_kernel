@@ -27,11 +27,11 @@ if svem_flag in sys.argv:
     sys.argv.remove(svem_flag)
 
 setup(name='fricas_kernel',
-      version='0.1',
+      version='0.4',
       description='A FriCAS kernel for IPython',
-      long_description="None",
+      long_description="PanAxiom wrapper kernel for IPython",
       author='Kurt Pagani',
-      author_email='kp@scios.ch',
+      author_email='nilqed@gmail.cim',
       url='https://bitbucket.com/kfp/fricas_kernel',
       py_modules=['fricas_kernel'],
       cmdclass={'install': install_with_kernelspec},
