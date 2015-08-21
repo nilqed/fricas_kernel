@@ -14,7 +14,9 @@ and *expect* functions wrapped in a class called **FriCAS**.
 
 Updates see at the end.
 
-Current version: 0.4 / August 2015
+Current version: 0.5 / August 2015
+
+There is a docker image: https://hub.docker.com/r/nilqed/ifricas/
 
 ------------
 Prerequisites
@@ -50,6 +52,9 @@ then start with:
 and choose the **FriCAS** kernel in the drop down menu.
 
 
+Note: you also can install the kernel locally (e.g. if no sudo):
+
+`$python kernel_setup.py install --user` 
 
 **Test** directly from git clone directory *ipython*:
 
@@ -129,6 +134,14 @@ Introspection and code completion reliably working.
 
 Code type is now recognized. Either single line or multiline input with or
 without continuation characters (indentation mode).
+
+####Update V0.5
+
+New LaTeX formatting (output w. MathJax)
+Colors
+Inline images (")logo")
+Plotting (conecpet with matplotlib ")plot")
+
 
 
 
