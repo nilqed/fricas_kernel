@@ -152,8 +152,7 @@ without continuation characters (indentation mode).
 
 New LaTeX formatting (output w. MathJax)
 Colors
-Inline images (")logo")
-Plotting (conecpet with matplotlib ")plot")
+Concepts: Inline images, Plotting (matplotlib) 
 
 
 
