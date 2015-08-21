@@ -68,7 +68,17 @@ $python -m IPython qtconsole --kernel fricas
 
 Otherwise, if you have version 3.x installed then start as usual.
 
-#####Screenshot (more in the folder)
+#####Screenshots (updated; more in the folder)
+
+New (V 0.5): Jupyter 3.2 (code completion)
+
+![alt text](http://kfp.bitbucket.org/img/jupyter1.png "Jupyter 1")
+
+New: introspection
+
+![alt text](http://kfp.bitbucket.org/img/jupyter2.png "Jupyter 2")
+
+QT console (V 0.1)
 
 ![alt text](https://github.com/scios/fricas_kernel/raw/master/screenshots/fkernel_cygc.png "QTconsole")
 
