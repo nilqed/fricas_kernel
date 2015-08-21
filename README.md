@@ -12,11 +12,14 @@ Instead of using pexepct's *replwrap* we use winpexpect/pexpect *spawn*
 and *expect* functions wrapped in a class called **FriCAS**.
 
 
-Updates see at the end.
+Update notes see at the end.
 
 Current version: 0.5 / August 2015
 
-There is a docker image: https://hub.docker.com/r/nilqed/ifricas/
+There is a *docker* image: https://hub.docker.com/r/nilqed/ifricas/
+
+Latest sample: http://kfp.bitbucket.org/tmp/test2.html
+
 
 ------------
 Prerequisites
@@ -52,7 +55,7 @@ then start with:
 and choose the **FriCAS** kernel in the drop down menu.
 
 
-Note: you also can install the kernel locally (e.g. if no sudo):
+*Note*: you can install the kernel locally:
 
 `$python kernel_setup.py install --user` 
 
@@ -63,7 +66,7 @@ $cd to the gitted *ipython* directory
 $python -m IPython qtconsole --kernel fricas
 ```
 
-Otherwise, if you have version 3.0dev installed then start as usual.
+Otherwise, if you have version 3.x installed then start as usual.
 
 #####Screenshot (more in the folder)
 
