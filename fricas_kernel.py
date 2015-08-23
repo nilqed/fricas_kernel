@@ -24,7 +24,7 @@ __version__ = '0.5'
 #====================#
 
 # theApp
-executable = "openaxiom -nosman"
+executable = "fricas -nosman"
 prompt_pat = "\([0-9]+\) ->"
 cont_char = "_"
 quit_cmd = ")quit"
